@@ -1,22 +1,30 @@
-# exhohabiters-pipeline
-AI-enabled pipeline Proof-of-Concept to detect exoplanets from noisy astronomical light curves using Gemini AI
+============================================================
+        EXOHABITERS: PHASE 1 PoC PIPELINE
+============================================================
 
-# EXOHABITERS - AI Exoplanet Detection Pipeline (PoC)
+1. Ingesting raw light curve telemetry...
+   -> 1000 light-curve data points generated
+   -> Artificial transit signal inserted
 
-## Project Overview
-This repository contains the Phase 1 Python Proof-of-Concept (PoC) for the **EXOHABITERS** architecture: an AI-enabled pipeline designed to detect exoplanets from noisy astronomical light curves. 
+2. Applying Savitzky-Golay Signal Smoothing...
+   -> Noise reduction completed
 
-This script demonstrates the core methodology of processing raw stellar telemetry and routing the extracted features to a Generative AI model for high-confidence classification.
+3. Extracting astrophysical features...
+   -> Baseline Flux      : 1.0003
+   -> Minimum Flux       : 0.9084
+   -> Transit Depth      : 0.0919
+   -> Signal Variance    : 0.000951
 
-## Core Features
-*   **Signal Processing:** Implements **Savitzky-Golay filtering** (via `scipy`) to mathematically smooth stellar flares and reduce instrumental noise.
-*   **Feature Extraction:** Programmatically calculates critical astrophysical data points, including *Transit Depth* and *Signal Variance*.
-*   **AI Integration:** Utilizes the **Google Gemini API** to evaluate the extracted features and classify the signal as a viable exoplanet candidate or a false positive (e.g., eclipsing binary).
+4. Performing preliminary transit analysis...
+   -> SIGNIFICANT TRANSIT SIGNAL
 
-## How to Run Locally
-1. Clone this repository.
-2. Install the required scientific libraries:
-   `pip install numpy scipy google-generativeai`
-3. Insert your own Google AI API Key into the `API_KEY` variable.
-4. Execute the pipeline:
-   `python3 "exoplanet detection.py"`
+5. Routing features to AI Classification Engine...
+
+============================================================
+             AI CLASSIFICATION OUTPUT
+============================================================
+Based on the extracted features, the significant transit depth of ~0.09 suggests a strong potential exoplanet candidate. However, the signal could also be indicative of an eclipsing binary system simulating a transit depth. Additional validation, including periodicity checks and odd-even transit depth tests, is scientifically required to confirm this candidate and rule out false positives.
+
+============================================================
+             PIPELINE EXECUTION COMPLETE
+============================================================
