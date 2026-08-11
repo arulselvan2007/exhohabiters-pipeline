@@ -1,0 +1,6 @@
+numpy
+lightkurve
+matplotlib
+scipy
+astropy
+google-genai
