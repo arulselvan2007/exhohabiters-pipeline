@@ -1,0 +1,41 @@
+EXOHABITERS CANDIDATE REPORT
+============================================================
+
+Target: TIC 261136679
+
+Orbital period: 6.268523 days
+Transit duration: 0.100000 days
+Transit depth: 0.000168
+BLS power: 0.003118
+
+AI ANALYSIS
+============================================================
+
+### Scientific Assessment: TIC 261136679
+
+**1. Signal Interpretation**
+The Box Least Squares (BLS) algorithm has identified a periodic dimming in the light curve of TIC 261136679.
+*   **Orbital Period (6.268523 days):** This represents the time interval between consecutive transits, suggesting an exoplanet candidate in a close-in orbit around its host star.
+*   **Transit Depth (0.000168):** This value indicates that 0.0168% of the stellar flux is being blocked. Assuming a Sun-like star, this depth corresponds to a planetary radius roughly consistent with a terrestrial or "super-Earth" sized body.
+
+**2. Candidate Assessment**
+The BLS power of 0.003118 indicates a statistically detectable signal above the local noise floor. The transit duration (0.1 days, or 2.4 hours) is consistent with an object crossing the disk of a dwarf or sub-giant star at this orbital period. While the signal is periodic and well-defined, the low depth necessitates rigorous scrutiny to distinguish between a planetary signal and astrophysical noise.
+
+**3. Possible False Positives**
+Before this candidate can be considered for planetary status, we must rule out common astrophysical mimics:
+*   **Eclipsing Binaries (EBs):** A background eclipsing binary blending with the target star can produce a shallow transit-like signal.
+*   **Grazing Eclipses:** An EB where the secondary star only partially occults the primary can mimic the depth of a small planet.
+*   **Stellar Variability:** Periodic fluctuations caused by starspots or pulsation modes can occasionally produce false periodic signals in the BLS algorithm.
+*   **Instrumental Artifacts:** Systematic noise or "pixel-level" anomalies in the detector can sometimes mimic transit signatures.
+
+**4. Recommended Validation**
+The detected signal remains an **exoplanet candidate** and requires further investigation to ensure it is not a false positive. We recommend the following validation steps:
+*   **Odd-Even Transit Comparison:** Checking for differences in depth between odd and even transits; significant differences often indicate an eclipsing binary system.
+*   **Secondary Eclipse Check:** Searching for a secondary dip in the light curve, which would indicate a self-luminous companion rather than a transiting planet.
+*   **Stellar Parameters:** Refinement of host star properties (radius, mass, and age) to confirm the calculated physical size of the candidate.
+*   **Independent Observations:** Utilizing ground-based high-resolution imaging to rule out nearby background stars and radial velocity (RV) follow-up to measure the mass of the candidate and confirm its planetary nature.
+
+*Note: This analysis is based on preliminary pipeline data and does not constitute a confirmed exoplanet discovery.*
+
+IMPORTANT:
+This pipeline identifies candidate transit signals. It does not confirm the existence of an exoplanet.

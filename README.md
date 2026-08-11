@@ -1,30 +1,34 @@
-============================================================
-        EXOHABITERS: PHASE 1 PoC PIPELINE
-============================================================
+# EXOHABITERS 🛰️
 
-1. Ingesting raw light curve telemetry...
-   -> 1000 light-curve data points generated
-   -> Artificial transit signal inserted
+## AI-Assisted Exoplanet Candidate Detection Pipeline
 
-2. Applying Savitzky-Golay Signal Smoothing...
-   -> Noise reduction completed
+EXOHABITERS is an AI-assisted astronomical data analysis pipeline that processes real NASA TESS light-curve data to identify periodic transit-like signals and generate an AI-based scientific assessment of potential exoplanet candidates.
 
-3. Extracting astrophysical features...
-   -> Baseline Flux      : 1.0003
-   -> Minimum Flux       : 0.9084
-   -> Transit Depth      : 0.0919
-   -> Signal Variance    : 0.000951
+The project combines traditional astronomical signal processing with Google's Gemini AI to create an end-to-end candidate screening workflow.
 
-4. Performing preliminary transit analysis...
-   -> SIGNIFICANT TRANSIT SIGNAL
+---
 
-5. Routing features to AI Classification Engine...
+## 🚀 Project Overview
 
-============================================================
-             AI CLASSIFICATION OUTPUT
-============================================================
-Based on the extracted features, the significant transit depth of ~0.09 suggests a strong potential exoplanet candidate. However, the signal could also be indicative of an eclipsing binary system simulating a transit depth. Additional validation, including periodicity checks and odd-even transit depth tests, is scientifically required to confirm this candidate and rule out false positives.
+Detecting exoplanets through the transit method involves identifying tiny periodic decreases in a star's observed brightness.
 
-============================================================
-             PIPELINE EXECUTION COMPLETE
-============================================================
+EXOHABITERS automates the initial stages of this process:
+
+```text
+Real TESS Data
+      ↓
+Light Curve Acquisition
+      ↓
+Data Cleaning
+      ↓
+Detrending
+      ↓
+Savitzky-Golay Filtering
+      ↓
+Box Least Squares (BLS)
+      ↓
+Transit Candidate Features
+      ↓
+Gemini AI Analysis
+      ↓
+Candidate Assessment
